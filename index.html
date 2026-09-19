@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0d0b10">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="style.css">
+<title>SecretDate</title>
+</head>
+<body>
+<header class="topbar"><div class="logo">Secret<span>Date</span></div><button id="filterBtn" class="icon">☰</button></header>
+
+<main>
+<section id="discover" class="screen active">
+<div class="hero"><p class="eyebrow">RENCONTRES ADULTES</p><h1>Près de toi</h1><p class="muted">Profils disponibles ce soir.</p></div>
+<div id="card" class="profile-card">
+<div class="photo" id="photo"></div>
+<div class="gradient"></div>
+<div class="profile-info"><div><h2 id="name">Lina, 29</h2><p id="meta">Paris · 2 km</p></div><span class="online">● en ligne</span></div>
+<div class="tags"><span>Sans lendemain</span><span>Ce soir</span></div>
+</div>
+<div class="actions"><button id="pass">✕</button><button id="fav">★</button><button id="like">♥</button></div>
+</section>
+
+<section id="events" class="screen"><h1>Soirées</h1><div class="event"><b>Soirée privée</b><span>Paris · Ce soir</span><button>Voir</button></div><div class="event"><b>Apéro libertin</b><span>Paris · Samedi</span><button>Voir</button></div></section>
+
+<section id="nearby" class="screen"><h1>Autour de moi</h1><div class="map"><div class="pin p1">●</div><div class="pin p2">●</div><div class="pin p3">●</div><div class="map-center">Toi</div></div><p class="muted">Localisation fictive dans cette démo.</p></section>
+
+<section id="messages" class="screen"><h1>Messages</h1><div class="message"><div class="avatar">L</div><div><b>Lina</b><p>Disponible ce soir</p></div><time>21:14</time></div><div class="message"><div class="avatar">M</div><div><b>Max & Julie</b><p>Merci pour ton message</p></div><time>19:42</time></div></section>
+
+<section id="profile" class="screen"><h1>Profil</h1><div class="account"><div class="bigavatar">S</div><div><h2>Mon profil</h2><p class="muted">Complète ton profil pour recevoir des messages.</p></div></div><div class="settings"><button>✦ Passer Premium</button><button>◉ Mode discret</button><button>♡ Mes favoris</button><button>⚙ Paramètres</button></div></section>
+</main>
+
+<nav class="bottom">
+<button data-target="discover" class="nav active">⌂<small>Découvrir</small></button>
+<button data-target="events" class="nav">♢<small>Soirées</small></button>
+<button data-target="nearby" class="nav">⌖<small>Autour</small></button>
+<button data-target="messages" class="nav">♡<small>Messages</small></button>
+<button data-target="profile" class="nav">◯<small>Profil</small></button>
+</nav>
+
+<div id="modal" class="modal"><div class="modal-box"><button id="close" class="close">×</button><h2>Filtres</h2><label>Type de profil</label><div class="choices"><button>Femmes</button><button>Hommes</button><button>Couples</button><button>Trans</button></div><label>Rencontre</label><div class="choices"><button>Plan cul</button><button>Libertinage</button><button>Sans lendemain</button><button>Soirée</button></div><label>Rayon</label><input type="range" min="1" max="50" value="10"><button id="apply" class="primary">Appliquer</button></div></div>
+<script src="app.js"></script>
+</body>
+</html>
